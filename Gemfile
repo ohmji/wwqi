@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-# Jekyll and GitHub Pages
-gem "jekyll", "~> 4.3.0"
+# Use GitHub Pages gem for compatibility
 gem "github-pages", group: :jekyll_plugins
 
-# Plugins
+# Additional plugins (already included in github-pages but explicit for clarity)
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
 end
