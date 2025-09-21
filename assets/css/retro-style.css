@@ -1367,26 +1367,80 @@ tr:hover {
 }
 
 /* ================================================================
-   RESPONSIVE DESIGN - ENHANCED
+   RESPONSIVE DESIGN - ENHANCED MOBILE READING SUPPORT
    ================================================================ */
 
+/* Mobile-first typography improvements */
 @media (max-width: 768px) {
   body {
-    padding: var(--space-4);
+    padding: var(--space-3);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
   }
   
   .container {
-    padding: var(--space-6);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
   }
   
+  /* Enhanced mobile headings for better readability */
   h1 {
     font-size: var(--font-size-xl);
     padding: var(--space-4);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: center;
   }
   
   h2 {
     font-size: var(--font-size-lg);
     margin: var(--space-8) 0 var(--space-4) 0;
+    line-height: var(--line-height-tight);
+    padding-left: var(--space-4);
+  }
+  
+  h3 {
+    font-size: var(--font-size-base);
+    margin: var(--space-6) 0 var(--space-3) 0;
+    line-height: var(--line-height-normal);
+  }
+  
+  /* Mobile-optimized text for better reading */
+  p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: var(--space-4) 0;
+    max-width: none;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Enhanced list spacing for mobile */
+  ul, ol {
+    margin: var(--space-4) 0;
+    padding-left: var(--space-5);
+    line-height: 1.6;
+  }
+  
+  li {
+    margin: var(--space-3) 0;
+    word-wrap: break-word;
+  }
+  
+  /* Mobile code blocks */
+  code {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-2);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+  
+  /* Mobile blockquotes */
+  blockquote {
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
   }
   
   .site-nav ul {
@@ -1407,57 +1461,138 @@ tr:hover {
     gap: var(--space-3);
   }
   
+  /* Enhanced touch-friendly stock cards */
   .stock-card {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--space-3);
+    gap: var(--space-4);
     text-align: center;
+    padding: var(--space-6);
+    min-height: 120px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .stock-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
   }
   
   .stock-description {
     white-space: normal;
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
   }
   
   .recommendation {
     margin-left: 0;
     align-self: center;
+    padding: var(--space-2) var(--space-4);
+    min-width: 80px;
+    font-size: var(--font-size-xs);
   }
   
   .quick-links {
     grid-template-columns: 1fr;
   }
   
+  /* Touch-optimized quick link cards */
   .quick-link-card {
     flex-direction: column;
     text-align: center;
+    padding: var(--space-6);
+    gap: var(--space-4);
+    min-height: 100px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .quick-link-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .link-icon {
+    font-size: 1.5rem;
   }
   
   .principles-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
   
+  /* Enhanced mobile analysis cards */
   .analysis-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .analysis-card {
+    padding: var(--space-5);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .analysis-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
   }
   
   .analysis-header {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
   
   .analysis-ticker {
     align-self: flex-start;
+    font-size: var(--font-size-xs);
+  }
+  
+  .analysis-insight {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
   }
 }
 
+/* Small mobile devices - extra reading optimizations */
 @media (max-width: 480px) {
-  .container {
-    padding: var(--space-4);
+  body {
+    padding: var(--space-2);
+    font-size: var(--font-size-sm);
   }
   
+  .container {
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+  }
+  
+  /* Compact headings for small screens */
   h1 {
     font-size: var(--font-size-lg);
+    padding: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+  
+  h2 {
+    font-size: var(--font-size-base);
+    margin: var(--space-6) 0 var(--space-3) 0;
+  }
+  
+  h3 {
+    font-size: var(--font-size-sm);
+    margin: var(--space-4) 0 var(--space-2) 0;
+  }
+  
+  /* Optimized text for very small screens */
+  p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: var(--space-3) 0;
+  }
+  
+  /* Compact navigation */
+  .site-nav a, .theme-toggle {
+    padding: var(--space-3) var(--space-2);
+    font-size: var(--font-size-xs);
   }
   
   .portfolio-grid {
@@ -1466,6 +1601,186 @@ tr:hover {
   
   .analysis-grid {
     gap: var(--space-3);
+  }
+  
+  /* Compact cards for small screens */
+  .stock-card, .analysis-card, .quick-link-card {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+  
+  .retro-button {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+    min-width: 100px;
+  }
+  
+  /* Tables on small screens */
+  table {
+    font-size: var(--font-size-xs);
+  }
+  
+  th, td {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* ================================================================
+   MOBILE-SPECIFIC READING ENHANCEMENTS
+   ================================================================ */
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .stock-card:hover,
+  .analysis-card:hover,
+  .quick-link-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* Enhanced touch feedback */
+  .stock-card:active,
+  .analysis-card:active,
+  .quick-link-card:active {
+    transform: scale(0.98);
+    background: var(--bg-selection);
+  }
+  
+  /* Better button touch targets */
+  .retro-button,
+  .theme-toggle,
+  .site-nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .container {
+    padding: var(--space-4) var(--space-6);
+  }
+  
+  h1 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-6);
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .analysis-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Dark mode mobile adjustments */
+@media (max-width: 768px) {
+  :root.light-theme {
+    /* Slightly increased contrast for mobile light theme */
+    --green-primary: #0a4d1f;
+    --green-bright: #084119;
+    --shadow-md: 0 4px 6px rgba(13, 95, 42, 0.15), 0 2px 4px rgba(13, 95, 42, 0.08);
+  }
+}
+
+/* Reading mode enhancements */
+.reading-mode {
+  line-height: 1.8;
+  font-size: 1.1em;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.reading-mode p {
+  margin-bottom: var(--space-5);
+  text-align: left;
+}
+
+.reading-mode h2, .reading-mode h3 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-5);
+}
+
+/* Mobile device specific styles */
+.mobile-device {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-device * {
+  /* Prevent text inflation on mobile */
+  max-height: 999999px;
+}
+
+/* Better mobile table handling */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr {
+    border: 1px solid var(--green-border);
+    margin-bottom: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+  }
+  
+  td {
+    border: none;
+    padding: var(--space-2) 0;
+    position: relative;
+    padding-left: 30%;
+    white-space: normal;
+    text-align: left;
+  }
+  
+  td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 25%;
+    padding-right: var(--space-2);
+    white-space: nowrap;
+    font-weight: var(--font-weight-semibold);
+    color: var(--green-bright);
+  }
+}
+
+/* Scroll behavior for mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--space-8);
+  }
+  
+  /* Better text selection on mobile */
+  ::selection {
+    background: var(--green-hover);
+    color: var(--green-bright);
+  }
+  
+  /* Improved focus indicators for mobile */
+  :focus-visible {
+    outline: 3px solid var(--green-keyword);
+    outline-offset: 3px;
   }
 }
 

@@ -148,8 +148,108 @@
         });
       }
 
+      // Mobile reading enhancements
+      function initMobileFeatures() {
+        // Detect mobile device
+        const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+        
+        if (isMobile) {
+          // Add mobile class to body
+          document.body.classList.add('mobile-device');
+          
+          // Improve touch feedback
+          document.querySelectorAll('.stock-card, .analysis-card, .quick-link-card').forEach(card => {
+            card.addEventListener('touchstart', function() {
+              this.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', function() {
+              setTimeout(() => {
+                this.style.transform = '';
+              }, 150);
+            });
+          });
+          
+          // Prevent 300ms click delay on mobile
+          let lastTouchTime = 0;
+          document.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchTime < 300) {
+              e.preventDefault();
+            }
+            lastTouchTime = now;
+          });
+          
+          // Optimize scrolling performance
+          let ticking = false;
+          function updateScrollPosition() {
+            // Add scroll-based optimizations here if needed
+            ticking = false;
+          }
+          
+          document.addEventListener('scroll', function() {
+            if (!ticking) {
+              requestAnimationFrame(updateScrollPosition);
+              ticking = true;
+            }
+          }, { passive: true });
+          
+          // Adjust viewport on orientation change
+          window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+              window.scrollTo(0, 0);
+            }, 100);
+          });
+        }
+        
+        // Reading mode toggle for better mobile reading
+        const readingModeKey = 'reading-mode';
+        let isReadingMode = localStorage.getItem(readingModeKey) === 'true';
+        
+        function toggleReadingMode() {
+          isReadingMode = !isReadingMode;
+          localStorage.setItem(readingModeKey, isReadingMode);
+          
+          const mainContent = document.querySelector('.page-content');
+          if (mainContent) {
+            if (isReadingMode) {
+              mainContent.classList.add('reading-mode');
+            } else {
+              mainContent.classList.remove('reading-mode');
+            }
+          }
+        }
+        
+        // Initialize reading mode
+        if (isReadingMode) {
+          const mainContent = document.querySelector('.page-content');
+          if (mainContent) {
+            mainContent.classList.add('reading-mode');
+          }
+        }
+        
+        // Add reading mode toggle on double-tap (mobile only)
+        if (isMobile) {
+          let lastTapTime = 0;
+          document.addEventListener('touchend', function(e) {
+            const currentTime = Date.now();
+            const tapLength = currentTime - lastTapTime;
+            if (tapLength < 500 && tapLength > 0) {
+              // Double tap detected
+              if (e.target.closest('p, h1, h2, h3, li')) {
+                toggleReadingMode();
+              }
+            }
+            lastTapTime = currentTime;
+          });
+        }
+      }
+
       // Add retro loading effects
       document.addEventListener('DOMContentLoaded', function() {
+        // Initialize mobile features
+        initMobileFeatures();
+        
         // Initialize theme toggle
         initThemeToggle();
         
