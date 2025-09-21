@@ -1,10 +1,20 @@
-# Worldly Wisdom Quality Investing (WWQI)
+# Charlie Munger Investment Analysis Framework
 
-> *"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."* - Charlie Munger
+A systematic approach to value investing following Charlie Munger's time-tested principles.
 
-## Overview
+## 🌐 Live Site
 
-**Worldly Wisdom Quality Investing (WWQI)** is a comprehensive investment analysis framework based on Charlie Munger's timeless investment philosophy. This repository provides tools, templates, and methodologies for conducting thorough fundamental analysis using multidisciplinary mental models, emphasizing quality businesses, competitive moats, and margin of safety.
+Visit the GitHub Pages site: **[https://ohmji.github.io/wwqi](https://ohmji.github.io/wwqi)**
+
+## 📊 What This Is
+
+This repository contains:
+- **Investment analyses** following Charlie Munger's framework
+- **Systematic methodology** for business evaluation
+- **Portfolio management** tools and guidelines
+- **Mental models** application in investment decisions
+
+> *"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."* — Charlie Munger
 
 ## Core Philosophy
 

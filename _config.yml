@@ -1,0 +1,68 @@
+# GitHub Pages Configuration for Investment Analysis Portfolio
+title: "Charlie Munger Investment Analysis Framework"
+description: "Systematic investment analysis following Charlie Munger's principles"
+baseurl: "/wwqi"
+url: "https://ohmji.github.io"
+
+# Theme
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - index.md
+  - analysis/index.md
+  - portfolio/index.md
+  - framework.md
+
+# Collections
+collections:
+  analyses:
+    output: true
+    permalink: /analysis/:name/
+  
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "analyses"
+    values:
+      layout: "analysis"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - .claude/
+  - .git/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Site settings
+author: "Investment Analyst"
+email: "your-email@example.com"
+twitter_username: ""
+github_username: "ohmji"
+
+# Analytics (optional)
+google_analytics: ""
+
+# SEO
+lang: en_US
+timezone: America/New_York
