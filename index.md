@@ -12,82 +12,7 @@ title: Home
   </blockquote>
 </div>
 
-## 📊 CURRENT HOLDINGS
 
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">COST</div>
-    <div class="stock-description">Costco - Premium warehouse club with membership moats</div>
-  </div>
-  <div class="stock-price">$960</div>
-  <div class="recommendation hold">HOLD</div>
-</div>
-
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">RKLB</div>
-    <div class="stock-description">Rocket Lab - #2 US space launch provider</div>
-  </div>
-  <div class="stock-price">$47.79</div>
-  <div class="recommendation hold">WATCH</div>
-</div>
-
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">LULU</div>
-    <div class="stock-description">Lululemon - Athletic apparel turnaround</div>
-  </div>
-  <div class="stock-price">$169.62</div>
-  <div class="recommendation buy">WEAK BUY</div>
-</div>
-
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">KO</div>
-    <div class="stock-description">Coca-Cola - Defensive dividend aristocrat</div>
-  </div>
-  <div class="stock-price">$66.21</div>
-  <div class="recommendation buy">QUAL. BUY</div>
-</div>
-
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">FIG</div>
-    <div class="stock-description">Figma - Design software with network effects</div>
-  </div>
-  <div class="stock-price">$80.00</div>
-  <div class="recommendation hold">CAUTIOUS</div>
-</div>
-
-<div class="stock-card">
-  <div class="stock-info">
-    <div class="stock-ticker">UBER</div>
-    <div class="stock-description">Uber - Platform mobility transformation</div>
-  </div>
-  <div class="stock-price">$93.75</div>
-  <div class="recommendation hold">HOLD</div>
-</div>
-
-## 📈 PORTFOLIO STATS
-
-<div class="stats-grid">
-  <div class="stat-box">
-    <span class="stat-number">6</span>
-    <span class="stat-label">COMPANIES ANALYZED</span>
-  </div>
-  <div class="stat-box">
-    <span class="stat-number">5</span>
-    <span class="stat-label">SECTORS COVERED</span>
-  </div>
-  <div class="stat-box">
-    <span class="stat-number">16</span>
-    <span class="stat-label">HOURS PER ANALYSIS</span>
-  </div>
-  <div class="stat-box">
-    <span class="stat-number">30%</span>
-    <span class="stat-label">MIN. MARGIN SAFETY</span>
-  </div>
-</div>
 
 ## 🎮 NAVIGATION MENU
 
@@ -144,39 +69,6 @@ title: Home
   </div>
 </div>
 
-## 📰 RECENT UPDATES
-
-<div class="menu-card">
-  <h3 style="margin-top: 0;">🗞️ September 2025 Activity</h3>
-  
-  <table>
-    <tr>
-      <th>DATE</th>
-      <th>ACTIVITY</th>
-      <th>STATUS</th>
-    </tr>
-    <tr>
-      <td>Sep 21</td>
-      <td>Completed Rocket Lab (RKLB) business analysis</td>
-      <td><span class="recommendation buy" style="font-size: 0.5rem;">DONE</span></td>
-    </tr>
-    <tr>
-      <td>Sep 21</td>
-      <td>Updated Costco (COST) valuation assessment</td>
-      <td><span class="recommendation buy" style="font-size: 0.5rem;">DONE</span></td>
-    </tr>
-    <tr>
-      <td>Sep 20</td>
-      <td>Added business explanation command framework</td>
-      <td><span class="recommendation buy" style="font-size: 0.5rem;">DONE</span></td>
-    </tr>
-    <tr>
-      <td>Ongoing</td>
-      <td>Monitoring Figma post-IPO performance</td>
-      <td><span class="recommendation hold" style="font-size: 0.5rem;">WATCH</span></td>
-    </tr>
-  </table>
-</div>
 
 ## 💎 INVESTMENT PHILOSOPHY
 

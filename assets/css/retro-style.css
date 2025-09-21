@@ -2,24 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Courier+Prime:wght@400;700&family=Orbitron:wght@400;700;900&display=swap');
 
 :root {
-  /* Optimized Retro Color Palette for Readability */
-  --retro-cream: #faf8f0;
+  /* Eye-Friendly Retro Color Palette */
+  --retro-cream: #fbf9f4;
+  --retro-warm-white: #fefcf8;
   --retro-brown: #8b4513;
-  --retro-dark-brown: #3d2914;
-  --retro-orange: #ff7300;
-  --retro-yellow: #fff200;
-  --retro-red: #dc143c;
-  --retro-green: #2e8b2e;
-  --retro-black: #1a1a1a;
-  --retro-white: #ffffff;
-  --retro-light-gray: #f0f0f0;
-  --retro-medium-gray: #666666;
+  --retro-dark-brown: #2d1f0f;
+  --retro-soft-orange: #e67e22;
+  --retro-muted-yellow: #f1c40f;
+  --retro-soft-red: #e74c3c;
+  --retro-soft-green: #27ae60;
+  --retro-charcoal: #2c3e50;
+  --retro-off-white: #fefefe;
+  --retro-light-beige: #f8f6f0;
+  --retro-medium-gray: #7f8c8d;
+  --retro-text-primary: #2c3e50;
+  --retro-text-secondary: #34495e;
   
   /* Typography */
   --font-retro: 'Press Start 2P', monospace;
   --font-mono: 'Courier Prime', monospace;
   --font-futuristic: 'Orbitron', monospace;
-  --font-readable: 'Courier Prime', 'Monaco', 'Menlo', monospace;
+  --font-readable: 'Courier Prime', 'Georgia', 'Times New Roman', serif;
 }
 
 /* Base Styling */
@@ -30,87 +33,115 @@
 body {
   background: var(--retro-cream);
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(139, 69, 19, 0.15) 1px, transparent 0);
-  background-size: 25px 25px;
+    radial-gradient(circle at 1px 1px, rgba(139, 69, 19, 0.08) 1px, transparent 0);
+  background-size: 30px 30px;
   font-family: var(--font-readable);
-  color: var(--retro-black);
-  line-height: 1.7;
+  color: var(--retro-text-primary);
+  line-height: 1.8;
   margin: 0;
   padding: 20px;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 400;
+  /* Eye comfort optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  background: var(--retro-white);
-  border: 3px solid var(--retro-dark-brown);
-  box-shadow: 6px 6px 0px rgba(139, 69, 19, 0.3);
-  padding: 40px;
-  border-radius: 8px;
+  background: var(--retro-warm-white);
+  border: 2px solid var(--retro-dark-brown);
+  box-shadow: 4px 4px 12px rgba(44, 62, 80, 0.1);
+  padding: 50px;
+  border-radius: 12px;
+  /* Subtle paper texture for comfort */
+  background-image: 
+    linear-gradient(90deg, transparent 79px, #f0f0f0 79px, #f0f0f0 81px, transparent 81px),
+    linear-gradient(transparent 19px, rgba(44, 62, 80, 0.02) 19px, rgba(44, 62, 80, 0.02) 21px, transparent 21px);
+  background-size: 82px 22px;
 }
 
 /* Headers */
 h1 {
   font-family: var(--font-retro);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--retro-dark-brown);
   text-align: center;
-  margin: 0 0 40px 0;
-  padding: 25px;
+  margin: 0 0 45px 0;
+  padding: 30px;
   border: 2px solid var(--retro-dark-brown);
-  background: linear-gradient(135deg, var(--retro-yellow), #ffeb3b);
-  text-shadow: 1px 1px 0px rgba(255, 115, 0, 0.5);
-  letter-spacing: 1px;
-  border-radius: 4px;
+  background: linear-gradient(135deg, var(--retro-muted-yellow), #f8e825);
+  text-shadow: none;
+  letter-spacing: 0.8px;
+  border-radius: 8px;
 }
 
 h2 {
   font-family: var(--font-readable);
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--retro-dark-brown);
-  border-bottom: 2px solid var(--retro-brown);
-  padding-bottom: 12px;
-  margin: 40px 0 25px 0;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--retro-text-primary);
+  border-bottom: 2px solid var(--retro-soft-orange);
+  padding-bottom: 15px;
+  margin: 45px 0 30px 0;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
 }
 
 h3 {
   font-family: var(--font-readable);
-  font-weight: 700;
-  color: var(--retro-dark-brown);
-  font-size: 1.3rem;
-  margin: 30px 0 20px 0;
+  font-weight: 600;
+  color: var(--retro-text-primary);
+  font-size: 1.25rem;
+  margin: 35px 0 25px 0;
+  line-height: 1.4;
 }
 
 /* Improved paragraph and text readability */
 p {
-  margin: 16px 0;
-  line-height: 1.8;
-  font-size: 16px;
+  margin: 20px 0;
+  line-height: 1.9;
+  font-size: 17px;
+  color: var(--retro-text-secondary);
+  max-width: 75ch; /* Optimal reading width */
 }
 
 /* Better list styling */
 ul, ol {
-  margin: 16px 0;
-  padding-left: 24px;
+  margin: 20px 0;
+  padding-left: 28px;
+  line-height: 1.8;
 }
 
 li {
-  margin: 8px 0;
-  line-height: 1.7;
+  margin: 12px 0;
+  line-height: 1.8;
+  color: var(--retro-text-secondary);
+}
+
+/* Better text spacing for extended reading */
+strong {
+  color: var(--retro-text-primary);
+  font-weight: 600;
+}
+
+em {
+  color: var(--retro-text-secondary);
+  font-style: italic;
 }
 
 /* Navigation Menu */
 .site-nav {
-  background: var(--retro-black);
-  border: 2px solid var(--retro-brown);
-  margin-bottom: 30px;
+  background: var(--retro-charcoal);
+  border: 2px solid var(--retro-dark-brown);
+  margin-bottom: 35px;
   padding: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
 }
 
 .site-nav ul {
@@ -123,7 +154,7 @@ li {
 
 .site-nav li {
   flex: 1;
-  border-right: 1px solid var(--retro-brown);
+  border-right: 1px solid rgba(139, 69, 19, 0.3);
   margin: 0;
 }
 
@@ -133,43 +164,43 @@ li {
 
 .site-nav a {
   display: block;
-  padding: 18px 20px;
-  color: var(--retro-yellow);
+  padding: 20px 22px;
+  color: var(--retro-cream);
   text-decoration: none;
   font-family: var(--font-readable);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   transition: all 0.3s ease;
 }
 
 .site-nav a:hover {
-  background: var(--retro-orange);
-  color: var(--retro-black);
+  background: var(--retro-soft-orange);
+  color: var(--retro-warm-white);
 }
 
 /* Menu-Style Cards */
 .menu-card {
-  border: 2px solid var(--retro-dark-brown);
-  background: var(--retro-white);
-  margin: 25px 0;
-  padding: 30px;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  background: var(--retro-off-white);
+  margin: 30px 0;
+  padding: 35px;
   position: relative;
-  box-shadow: 3px 3px 0px rgba(139, 69, 19, 0.3);
-  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+  border-radius: 10px;
 }
 
 .menu-card::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 1px dashed rgba(139, 69, 19, 0.4);
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1px dashed rgba(44, 62, 80, 0.15);
   pointer-events: none;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 /* Stock Analysis Cards */
@@ -177,82 +208,82 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid var(--retro-brown);
-  background: var(--retro-light-gray);
-  margin: 20px 0;
-  padding: 25px;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  background: var(--retro-light-beige);
+  margin: 25px 0;
+  padding: 30px;
   position: relative;
-  border-radius: 6px;
-  box-shadow: 2px 2px 0px rgba(139, 69, 19, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
 }
 
 .stock-info {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .stock-ticker {
   font-family: var(--font-retro);
-  font-size: 1.1rem;
-  color: var(--retro-dark-brown);
-  margin-bottom: 8px;
-  letter-spacing: 1px;
+  font-size: 1.05rem;
+  color: var(--retro-text-primary);
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
 }
 
 .stock-description {
   font-family: var(--font-readable);
-  color: var(--retro-black);
-  margin-bottom: 12px;
-  font-size: 15px;
-  line-height: 1.6;
+  color: var(--retro-text-secondary);
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .stock-price {
   font-family: var(--font-futuristic);
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--retro-white);
-  background: var(--retro-dark-brown);
-  padding: 12px 18px;
-  border: 2px solid var(--retro-orange);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--retro-off-white);
+  background: var(--retro-charcoal);
+  padding: 14px 20px;
+  border: 1px solid var(--retro-soft-orange);
   display: inline-block;
-  border-radius: 4px;
-  min-width: 100px;
+  border-radius: 6px;
+  min-width: 110px;
   text-align: center;
 }
 
 /* Recommendation Badges */
 .recommendation {
   font-family: var(--font-readable);
-  font-weight: 700;
-  font-size: 0.8rem;
-  padding: 10px 16px;
-  border: 2px solid;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 12px 18px;
+  border: 1px solid;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   display: inline-block;
-  margin-left: 15px;
-  border-radius: 4px;
-  min-width: 80px;
+  margin-left: 18px;
+  border-radius: 6px;
+  min-width: 90px;
   text-align: center;
 }
 
 .recommendation.buy {
-  background: var(--retro-green);
-  color: var(--retro-white);
-  border-color: var(--retro-dark-brown);
+  background: var(--retro-soft-green);
+  color: var(--retro-off-white);
+  border-color: var(--retro-charcoal);
 }
 
 .recommendation.hold {
-  background: var(--retro-yellow);
-  color: var(--retro-dark-brown);
-  border-color: var(--retro-dark-brown);
+  background: var(--retro-muted-yellow);
+  color: var(--retro-charcoal);
+  border-color: var(--retro-charcoal);
 }
 
 .recommendation.sell {
-  background: var(--retro-red);
-  color: var(--retro-white);
-  border-color: var(--retro-dark-brown);
+  background: var(--retro-soft-red);
+  color: var(--retro-off-white);
+  border-color: var(--retro-charcoal);
 }
 
 /* Tables */
@@ -329,26 +360,28 @@ tr:hover {
 
 /* Quotes and Callouts */
 blockquote {
-  border: 2px solid var(--retro-brown);
-  background: var(--retro-light-gray);
-  padding: 25px 30px;
-  margin: 25px 0;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  background: var(--retro-light-beige);
+  padding: 30px 35px;
+  margin: 30px 0;
   font-family: var(--font-readable);
   font-style: italic;
   position: relative;
-  border-radius: 6px;
-  font-size: 16px;
-  line-height: 1.7;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--retro-text-secondary);
+  max-width: 70ch;
 }
 
 blockquote::before {
   content: "💰";
   position: absolute;
-  top: -12px;
-  left: 25px;
-  background: var(--retro-light-gray);
-  padding: 0 12px;
-  font-size: 1.2rem;
+  top: -15px;
+  left: 30px;
+  background: var(--retro-light-beige);
+  padding: 0 15px;
+  font-size: 1.3rem;
 }
 
 /* Portfolio Stats */
@@ -521,11 +554,46 @@ blockquote::before {
   animation: retro-glow 2s ease-in-out infinite;
 }
 
+/* Eye comfort optimizations */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --retro-cream: #2a2926;
+    --retro-warm-white: #1e1e1c;
+    --retro-text-primary: #e8e6e3;
+    --retro-text-secondary: #c7c5c0;
+    --retro-light-beige: #2f2d2a;
+    --retro-off-white: #232220;
+    --retro-charcoal: #3a3a38;
+  }
+  
+  body {
+    filter: sepia(5%) saturate(95%) brightness(0.9);
+  }
+  
+  .container {
+    background: var(--retro-warm-white);
+    border-color: #4a4844;
+  }
+  
+  .menu-card, .stock-card {
+    background: var(--retro-off-white);
+    border-color: #4a4844;
+  }
+}
+
+/* Blue light reduction for extended reading */
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    filter: sepia(3%) saturate(97%) hue-rotate(5deg);
+  }
+}
+
 /* Print Styles */
 @media print {
   body {
     background: white;
     color: black;
+    filter: none;
   }
   
   .container {
