@@ -29,6 +29,7 @@
             <li><a href="{{ "/analysis/" | relative_url }}">[PORTFOLIO]</a></li>
             <li><a href="{{ "/framework/" | relative_url }}">[FRAMEWORK]</a></li>
             <li><a href="https://github.com/{{ site.github_username }}/wwqi">[CODE]</a></li>
+            <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">[DARK]</button></li>
           </ul>
         </nav>
       </header>
@@ -94,8 +95,64 @@
         }, speed);
       }
 
+      // Theme toggle functionality
+      function initThemeToggle() {
+        const toggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+        
+        // Get saved theme or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+        
+        function setTheme(theme) {
+          if (theme === 'light') {
+            root.classList.add('light-theme');
+            toggle.textContent = '[LIGHT]';
+            toggle.setAttribute('aria-label', 'Switch to dark theme');
+          } else {
+            root.classList.remove('light-theme');
+            toggle.textContent = '[DARK]';
+            toggle.setAttribute('aria-label', 'Switch to light theme');
+          }
+          localStorage.setItem('theme', theme);
+        }
+        
+        function toggleTheme() {
+          const currentTheme = root.classList.contains('light-theme') ? 'light' : 'dark';
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          
+          // Add transition effect
+          root.style.transition = 'all 0.3s ease-in-out';
+          setTheme(newTheme);
+          
+          // Remove transition after animation
+          setTimeout(() => {
+            root.style.transition = '';
+          }, 300);
+          
+          // Add click feedback
+          toggle.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            toggle.style.transform = '';
+          }, 150);
+        }
+        
+        toggle.addEventListener('click', toggleTheme);
+        
+        // Keyboard support
+        toggle.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleTheme();
+          }
+        });
+      }
+
       // Add retro loading effects
       document.addEventListener('DOMContentLoaded', function() {
+        // Initialize theme toggle
+        initThemeToggle();
+        
         // Random glitch effect every 10 seconds
         setInterval(addGlitchEffect, 10000);
         

@@ -10,7 +10,7 @@
    ================================================================ */
 
 :root {
-  /* === REFINED RETRO GREEN PALETTE === */
+  /* === REFINED RETRO GREEN PALETTE (DARK THEME) === */
   /* Enhanced contrast and readability */
   --bg-primary: #0a0f0d;           /* Deeper background for better contrast */
   --bg-secondary: #121610;         /* Card backgrounds */
@@ -74,6 +74,142 @@
   --shadow-md: 0 4px 6px rgba(77, 230, 138, 0.1), 0 2px 4px rgba(77, 230, 138, 0.06);
   --shadow-lg: 0 10px 15px rgba(77, 230, 138, 0.1), 0 4px 6px rgba(77, 230, 138, 0.05);
   --shadow-glow: 0 0 0 1px rgba(77, 230, 138, 0.1), 0 0 20px rgba(77, 230, 138, 0.1);
+}
+
+/* ================================================================
+   LIGHT THEME OVERRIDE
+   ================================================================ */
+
+:root.light-theme {
+  /* === RETRO GREEN LIGHT THEME PALETTE === */
+  /* High contrast, paper-like background with retro green accents */
+  --bg-primary: #f8fdf9;           /* Soft paper white with subtle green tint */
+  --bg-secondary: #ffffff;         /* Pure white for cards */
+  --bg-selection: #e8f5ea;         /* Light green selection background */
+  --bg-accent: #f0f8f2;            /* Very subtle green accent background */
+  
+  --green-primary: #0d5f2a;        /* Dark forest green for primary text */
+  --green-bright: #0a4d22;         /* Darker green for highlights */
+  --green-keyword: #006b3c;        /* Medium green for keywords/CTAs */
+  --green-muted: #6b8e7a;          /* Muted green-gray for secondary text */
+  --green-border: #c1e0ca;         /* Light green borders */
+  --green-glow: #4de68a20;         /* Subtle green glow for light theme */
+  --green-hover: #d4f0dc;          /* Light green hover background */
+  
+  /* Enhanced shadows for light theme */
+  --shadow-sm: 0 1px 3px rgba(13, 95, 42, 0.12), 0 1px 2px rgba(13, 95, 42, 0.06);
+  --shadow-md: 0 4px 6px rgba(13, 95, 42, 0.1), 0 2px 4px rgba(13, 95, 42, 0.06);
+  --shadow-lg: 0 10px 15px rgba(13, 95, 42, 0.1), 0 4px 6px rgba(13, 95, 42, 0.05);
+  --shadow-glow: 0 0 0 1px rgba(13, 95, 42, 0.05), 0 0 10px rgba(77, 230, 138, 0.1);
+}
+
+/* Light theme body adjustments */
+:root.light-theme body {
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(77, 230, 138, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(77, 230, 138, 0.03) 0%, transparent 50%);
+  color: var(--green-primary);
+}
+
+/* Light theme navigation adjustments */
+:root.light-theme .site-nav a:hover {
+  text-shadow: 0 0 8px rgba(0, 107, 60, 0.3);
+  box-shadow: 
+    inset 0 0 20px rgba(77, 230, 138, 0.08),
+    0 2px 10px rgba(13, 95, 42, 0.15);
+}
+
+/* Light theme button adjustments */
+:root.light-theme .retro-button {
+  background: var(--green-keyword);
+  color: white;
+  box-shadow: 0 2px 4px rgba(13, 95, 42, 0.2);
+}
+
+:root.light-theme .retro-button:hover {
+  background: white;
+  color: var(--green-keyword);
+  box-shadow: 
+    0 4px 8px rgba(13, 95, 42, 0.2),
+    inset 0 0 0 2px var(--green-keyword);
+}
+
+/* Light theme stock price adjustments */
+:root.light-theme .stock-price {
+  background: var(--green-keyword);
+  color: white;
+  box-shadow: 0 2px 4px rgba(13, 95, 42, 0.2);
+}
+
+:root.light-theme .analysis-ticker {
+  background: var(--green-keyword);
+  color: white;
+}
+
+/* Light theme recommendations */
+:root.light-theme .recommendation.buy {
+  background: var(--green-keyword);
+  color: white;
+  box-shadow: 0 2px 4px rgba(13, 95, 42, 0.2);
+}
+
+:root.light-theme .recommendation.hold {
+  background: var(--green-muted);
+  color: white;
+}
+
+:root.light-theme .recommendation.sell {
+  background: var(--bg-accent);
+  color: var(--green-primary);
+  border: 1px solid var(--green-border);
+}
+
+/* Light theme footer adjustments */
+:root.light-theme .footer-content::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--green-keyword),
+    var(--green-bright),
+    var(--green-keyword),
+    transparent
+  );
+}
+
+/* Light theme code blocks */
+:root.light-theme code {
+  background: var(--bg-accent);
+  color: var(--green-keyword);
+  border: 1px solid var(--green-border);
+}
+
+/* Light theme blockquotes */
+:root.light-theme blockquote {
+  background: var(--bg-accent);
+  border-left: 4px solid var(--green-keyword);
+  color: var(--green-primary);
+}
+
+/* Light theme tables */
+:root.light-theme table {
+  background: var(--bg-secondary);
+  border: 1px solid var(--green-border);
+}
+
+:root.light-theme th {
+  background: var(--bg-selection);
+  color: var(--green-bright);
+}
+
+:root.light-theme tr:hover {
+  background: var(--green-hover);
+}
+
+/* Light theme selection */
+:root.light-theme ::selection {
+  background: var(--bg-selection);
+  color: var(--green-bright);
 }
 
 /* ================================================================
@@ -489,6 +625,59 @@ hr {
   transform: rotate(180deg);
 }
 
+/* ================================================================
+   THEME TOGGLE BUTTON
+   ================================================================ */
+
+.theme-toggle {
+  display: block;
+  width: 100%;
+  padding: var(--space-4) var(--space-3);
+  background: transparent;
+  border: none;
+  color: var(--green-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid transparent;
+}
+
+.theme-toggle:hover {
+  background: var(--green-hover);
+  color: var(--green-bright);
+  border-bottom-color: var(--green-keyword);
+  box-shadow: 
+    inset 0 0 20px rgba(77, 230, 138, 0.1),
+    0 2px 10px rgba(77, 230, 138, 0.2);
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(77, 230, 138, 0.5);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--green-keyword);
+  outline-offset: -2px;
+  background: var(--green-hover);
+  color: var(--green-bright);
+}
+
+/* Light theme toggle adjustments */
+:root.light-theme .theme-toggle:hover {
+  text-shadow: 0 0 8px rgba(0, 107, 60, 0.3);
+  box-shadow: 
+    inset 0 0 20px rgba(77, 230, 138, 0.08),
+    0 2px 10px rgba(13, 95, 42, 0.15);
+}
+
 /* Enhanced mobile navigation */
 @media (max-width: 768px) {
   .site-nav {
@@ -550,6 +739,11 @@ hr {
   .site-nav .dropdown-menu a:hover {
     transform: translateX(8px);
     background: var(--bg-selection);
+  }
+  
+  /* Mobile theme toggle */
+  .theme-toggle:hover {
+    transform: translateX(4px);
   }
 }
 
