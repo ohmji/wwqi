@@ -2,171 +2,53 @@
 layout: default
 ---
 
-<article class="analysis-post">
-  <header class="analysis-header">
-    <h1>{{ page.title }}</h1>
-    
-    {% if page.ticker %}
+<div class="menu-card">
+  <h2 style="text-align: center; margin-top: 0;">📊 STOCK ANALYSIS REPORT 📊</h2>
+  
+  {% if page.ticker %}
+  <div class="stock-card" style="margin: 20px 0;">
     <div class="stock-info">
-      <span class="ticker">{{ page.ticker }}</span>
-      {% if page.price %}<span class="price">${{ page.price }}</span>{% endif %}
-      {% if page.market_cap %}<span class="market-cap">Market Cap: {{ page.market_cap }}</span>{% endif %}
+      <div class="stock-ticker">{{ page.ticker }}</div>
+      <div class="stock-description">{{ page.title | remove: page.ticker | remove: "(" | remove: ")" | strip }}</div>
+    </div>
+    {% if page.price %}<div class="stock-price">${{ page.price }}</div>{% endif %}
+    {% if page.recommendation %}
+    <div class="recommendation {{ page.recommendation | downcase | replace: '/', '-' | replace: ' ', '-' }}">
+      {{ page.recommendation }}
     </div>
     {% endif %}
-    
-    <div class="analysis-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% if page.recommendation %}
-      <span class="recommendation recommendation-{{ page.recommendation | downcase | replace: '/', '-' }}">
-        {{ page.recommendation }}
-      </span>
-      {% endif %}
-    </div>
-  </header>
-
-  <nav class="analysis-nav">
-    <h3>Quick Navigation</h3>
-    <ul>
-      <li><a href="#executive-summary">Executive Summary</a></li>
-      <li><a href="#business-model">Business Model</a></li>
-      <li><a href="#competitive-position">Competitive Position</a></li>
-      <li><a href="#financial-assessment">Financial Assessment</a></li>
-      <li><a href="#risk-analysis">Risk Analysis</a></li>
-      <li><a href="#valuation">Valuation</a></li>
-      <li><a href="#investment-decision">Investment Decision</a></li>
-    </ul>
-  </nav>
-
-  <div class="analysis-content">
-    {{ content }}
   </div>
+  {% endif %}
+  
+  <div style="text-align: center; margin-top: 20px;">
+    <span style="font-family: 'Courier Prime', monospace; color: #8b4513;">
+      Analysis Date: {{ page.date | date: "%B %d, %Y" }}
+    </span>
+  </div>
+</div>
 
-  <footer class="analysis-footer">
-    <div class="analysis-disclaimer">
-      <p><strong>Disclaimer:</strong> This analysis is for educational purposes only and should not be considered as personalized investment advice. Please consult with qualified financial advisors before making investment decisions.</p>
-    </div>
-    
-    <div class="analysis-navigation">
-      <a href="/analysis/" class="back-to-analyses">← Back to All Analyses</a>
-    </div>
-  </footer>
+<nav class="analysis-nav">
+  <h3 style="margin-top: 0;">🎮 QUICK JUMP MENU</h3>
+  <ul>
+    <li><a href="#executive-summary">📋 Executive Summary</a></li>
+    <li><a href="#business-model">🏢 Business Model</a></li>
+    <li><a href="#competitive-position">⚔️ Competitive Position</a></li>
+    <li><a href="#financial-assessment">💰 Financial Assessment</a></li>
+    <li><a href="#risk-analysis">⚠️ Risk Analysis</a></li>
+    <li><a href="#valuation">💎 Valuation</a></li>
+    <li><a href="#investment-decision">🎯 Investment Decision</a></li>
+  </ul>
+</nav>
+
+<article class="analysis-content">
+  {{ content }}
 </article>
 
-<style>
-.analysis-header {
-  border-bottom: 2px solid #e1e4e8;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-}
-
-.stock-info {
-  display: flex;
-  gap: 1rem;
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
-
-.ticker {
-  background: #0366d6;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.price, .market-cap {
-  color: #586069;
-  font-weight: 500;
-}
-
-.analysis-meta {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-top: 1rem;
-  color: #586069;
-}
-
-.recommendation {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.recommendation-buy { background: #28a745; color: white; }
-.recommendation-hold { background: #ffc107; color: #212529; }
-.recommendation-sell { background: #dc3545; color: white; }
-.recommendation-hold-watch { background: #17a2b8; color: white; }
-
-.analysis-nav {
-  background: #f6f8fa;
-  border: 1px solid #e1e4e8;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 2rem 0;
-}
-
-.analysis-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.5rem;
-}
-
-.analysis-nav li a {
-  color: #0366d6;
-  text-decoration: none;
-  padding: 0.25rem 0;
-  display: block;
-}
-
-.analysis-nav li a:hover {
-  text-decoration: underline;
-}
-
-.analysis-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-
-.analysis-content th,
-.analysis-content td {
-  border: 1px solid #e1e4e8;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-.analysis-content th {
-  background: #f6f8fa;
-  font-weight: 600;
-}
-
-.analysis-disclaimer {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 2rem 0;
-  font-size: 0.875rem;
-}
-
-.back-to-analyses {
-  display: inline-block;
-  color: #0366d6;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #e1e4e8;
-  border-radius: 6px;
-  margin-top: 1rem;
-}
-
-.back-to-analyses:hover {
-  background: #f6f8fa;
-  text-decoration: none;
-}
-</style>
+<div class="menu-card" style="margin-top: 40px;">
+  <h3 style="margin-top: 0;">🎮 NAVIGATION</h3>
+  <div style="text-align: center;">
+    <a href="/analysis/" class="retro-button">← BACK TO PORTFOLIO</a>
+    <a href="/" class="retro-button">🏠 HOME MENU</a>
+    <a href="/framework/" class="retro-button">🧠 FRAMEWORK</a>
+  </div>
+</div>

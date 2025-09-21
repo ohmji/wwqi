@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="{{ "/assets/css/retro-style.css" | relative_url }}">
+    
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <h1 class="glow-text">{{ site.title | default: "Charlie Munger Investment Analysis" }}</h1>
+        
+        <nav class="site-nav">
+          <ul>
+            <li><a href="{{ "/" | relative_url }}">🏠 HOME</a></li>
+            <li><a href="{{ "/analysis/" | relative_url }}">📊 PORTFOLIO</a></li>
+            <li><a href="{{ "/framework/" | relative_url }}">🧠 FRAMEWORK</a></li>
+            <li><a href="https://github.com/{{ site.github_username }}/wwqi">📁 CODE</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="page-content" aria-label="Content">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="menu-card">
+          <h3>💰 Investment Disclaimer</h3>
+          <p><strong>⚠️ EDUCATIONAL PURPOSE ONLY ⚠️</strong></p>
+          <p>This analysis follows Charlie Munger's investment framework for educational purposes. Not financial advice. Consult qualified advisors before making investment decisions.</p>
+          
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 2px dashed #8b4513;">
+            <p style="font-family: 'Press Start 2P', monospace; font-size: 0.6rem; text-align: center; letter-spacing: 1px;">
+              🎮 POWERED BY JEKYLL & GITHUB PAGES 🎮
+            </p>
+            <p style="text-align: center; margin-top: 10px;">
+              <em>"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."</em><br>
+              <strong>— Charlie Munger</strong>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Retro JavaScript Effects -->
+    <script>
+      // Add random retro glitch effect
+      function addGlitchEffect() {
+        const elements = document.querySelectorAll('h1, h2, .stock-ticker');
+        elements.forEach(el => {
+          if (Math.random() < 0.1) {
+            el.style.textShadow = '2px 0 #ff0000, -2px 0 #00ff00';
+            setTimeout(() => {
+              el.style.textShadow = '';
+            }, 100);
+          }
+        });
+      }
+
+      // Add typing effect to certain elements
+      function addTypingEffect(element, text, speed = 50) {
+        element.innerHTML = '';
+        let i = 0;
+        const timer = setInterval(() => {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+          } else {
+            clearInterval(timer);
+          }
+        }, speed);
+      }
+
+      // Add retro loading effects
+      document.addEventListener('DOMContentLoaded', function() {
+        // Random glitch effect every 10 seconds
+        setInterval(addGlitchEffect, 10000);
+        
+        // Add hover sound effects (visual feedback)
+        document.querySelectorAll('.retro-button, .site-nav a').forEach(button => {
+          button.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) rotate(1deg)';
+          });
+          
+          button.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+          });
+        });
+
+        // Add click effects
+        document.querySelectorAll('.stock-card').forEach(card => {
+          card.addEventListener('click', function() {
+            this.style.animation = 'none';
+            setTimeout(() => {
+              this.style.animation = 'pulse 0.5s ease-in-out';
+            }, 10);
+          });
+        });
+      });
+
+      // Add CSS animation for pulse effect
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+          100% { transform: scale(1); }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
