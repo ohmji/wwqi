@@ -23,8 +23,6 @@
   <body>
     <div class="container">
       <header class="site-header">
-        <h1 class="glow-text">{{ site.title | default: "Charlie Munger Investment Analysis" }}</h1>
-        
         <nav class="site-nav">
           <ul>
             <li><a href="{{ "/" | relative_url }}">🏠 HOME</a></li>
@@ -40,19 +38,28 @@
       </main>
 
       <footer class="site-footer">
-        <div class="menu-card">
-          <h3>💰 Investment Disclaimer</h3>
-          <p><strong>⚠️ EDUCATIONAL PURPOSE ONLY ⚠️</strong></p>
-          <p>This analysis follows Charlie Munger's investment framework for educational purposes. Not financial advice. Consult qualified advisors before making investment decisions.</p>
+        <div class="footer-content">
+          <div class="disclaimer-section">
+            <h3>💰 Investment Disclaimer</h3>
+            <div class="warning-box">
+              <p><strong>⚠️ EDUCATIONAL PURPOSE ONLY ⚠️</strong></p>
+              <p>This analysis follows Charlie Munger's investment framework for educational purposes. Not financial advice. Consult qualified advisors before making investment decisions.</p>
+            </div>
+          </div>
           
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 2px dashed #8b4513;">
-            <p style="font-family: 'Press Start 2P', monospace; font-size: 0.6rem; text-align: center; letter-spacing: 1px;">
-              🎮 POWERED BY JEKYLL & GITHUB PAGES 🎮
-            </p>
-            <p style="text-align: center; margin-top: 10px;">
-              <em>"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."</em><br>
-              <strong>— Charlie Munger</strong>
-            </p>
+          <div class="footer-divider"></div>
+          
+          <div class="footer-bottom">
+            <div class="powered-by">
+              <span class="retro-text">🎮 POWERED BY JEKYLL & GITHUB PAGES 🎮</span>
+            </div>
+            
+            <div class="footer-quote">
+              <blockquote>
+                <em>"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."</em>
+                <cite>— Charlie Munger</cite>
+              </blockquote>
+            </div>
           </div>
         </div>
       </footer>

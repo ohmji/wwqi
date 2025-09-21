@@ -23,87 +23,97 @@ Every analysis follows this systematic approach:
 
 ---
 
-## All Analyses
+## Analysis Portfolio
 
 ### Technology & Software
 
-<details>
-<summary><strong>Figma (FIG)</strong> - Design Software Platform</summary>
+<div class="analysis-grid">
+  <a href="FIG_analysis_20250920.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">FIG</span>
+      <span class="analysis-recommendation hold">CAUTIOUS</span>
+    </div>
+    <h3>Figma - Design Software Platform</h3>
+    <p class="analysis-insight">Dominant market position but extreme valuation at 32.6x EV/Revenue</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 20, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
 
-**Date:** September 20, 2025  
-**Recommendation:** HOLD/CAUTIOUS  
-**Key Insight:** Dominant market position but extreme valuation at 32.6x EV/Revenue
-
-**Summary:** Quality SaaS business with strong network effects trading at levels requiring perfect execution. 
-
-[📄 Full Analysis](FIG_analysis_20250920.md)
-</details>
-
-<details>
-<summary><strong>Rocket Lab (RKLB)</strong> - Aerospace & Launch Services</summary>
-
-**Date:** September 21, 2025  
-**Recommendation:** HOLD/WATCH  
-**Key Insight:** #2 U.S. space launch provider with strong positioning but high valuation
-
-**Summary:** Quality growth company in expanding space economy, but current 40x+ revenue multiple offers insufficient margin of safety.
-
-[📄 Full Analysis](RKLB_business_explanation_20250921.md)
-</details>
+  <a href="RKLB_business_explanation_20250921.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">RKLB</span>
+      <span class="analysis-recommendation hold">WATCH</span>
+    </div>
+    <h3>Rocket Lab - Aerospace & Launch</h3>
+    <p class="analysis-insight">#2 U.S. space launch provider with strong positioning but high valuation</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 21, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+</div>
 
 ### Consumer & Retail
 
-<details>
-<summary><strong>Costco (COST)</strong> - Warehouse Club Retail</summary>
+<div class="analysis-grid">
+  <a href="wwqi/analysis/COST_analysis_20250921.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">COST</span>
+      <span class="analysis-recommendation hold">HOLD</span>
+    </div>
+    <h3>Costco - Warehouse Club Retail</h3>
+    <p class="analysis-insight">Exceptional business model with membership moats, but 54x P/E lacks margin of safety</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 21, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
 
-**Date:** September 21, 2025  
-**Recommendation:** HOLD  
-**Key Insight:** Exceptional business model with membership moats, but 54x P/E lacks margin of safety
+  <a href="LULU_analysis_20250920.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">LULU</span>
+      <span class="analysis-recommendation buy">WEAK BUY</span>
+    </div>
+    <h3>Lululemon - Athletic Apparel</h3>
+    <p class="analysis-insight">Temporary headwinds creating opportunity for quality brand with 40-70% upside potential</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 20, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+</div>
 
-**Summary:** One of the highest-quality retail businesses with predictable cash flows, but even wonderful businesses can be poor investments at wrong price.
+### Consumer Staples & Transportation
 
-[📄 Full Analysis](COST_analysis_20250921.md)
-</details>
+<div class="analysis-grid">
+  <a href="KO_analysis_20250920.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">KO</span>
+      <span class="analysis-recommendation buy">QUAL. BUY</span>
+    </div>
+    <h3>Coca-Cola - Global Beverages</h3>
+    <p class="analysis-insight">Classic Munger investment with durable moats, predictable cash flows, and reasonable valuation</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 20, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
 
-<details>
-<summary><strong>Lululemon (LULU)</strong> - Athletic Apparel</summary>
-
-**Date:** September 20, 2025  
-**Recommendation:** HOLD/WEAK BUY  
-**Key Insight:** Temporary headwinds creating opportunity for quality brand
-
-**Summary:** Strong competitive moats through brand loyalty facing near-term execution challenges. DCF analysis suggests 40-70% upside potential.
-
-[📄 Full Analysis](LULU_analysis_20250920.md)
-</details>
-
-### Consumer Staples
-
-<details>
-<summary><strong>Coca-Cola (KO)</strong> - Global Beverage Company</summary>
-
-**Date:** September 20, 2025  
-**Recommendation:** QUALIFIED BUY  
-**Key Insight:** Classic Munger investment - durable moats, predictable cash flows, reasonable valuation
-
-**Summary:** Exemplifies wonderful business suitable for long-term holding despite secular headwinds from health trends.
-
-[📄 Full Analysis](KO_analysis_20250920.md)
-</details>
-
-### Transportation & Logistics
-
-<details>
-<summary><strong>Uber (UBER)</strong> - Platform Mobility Services</summary>
-
-**Date:** September 21, 2025  
-**Recommendation:** HOLD  
-**Key Insight:** Successful transformation to profitability but limited margin of safety
-
-**Summary:** Strong competitive position in large markets with competent management, but valuation offers limited upside with meaningful downside risks.
-
-[📄 Full Analysis](UBER_analysis_20250921.md)
-</details>
+  <a href="UBER_analysis_20250921.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">UBER</span>
+      <span class="analysis-recommendation hold">HOLD</span>
+    </div>
+    <h3>Uber - Platform Mobility</h3>
+    <p class="analysis-insight">Successful transformation to profitability but limited margin of safety at current valuation</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 21, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+</div>
 
 ---
 
