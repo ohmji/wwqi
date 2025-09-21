@@ -14,6 +14,74 @@ title: Home
 
 
 
+## 📊 CURRENT HOLDINGS
+
+<a href="/analysis/COST_analysis_20250921/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">COST</div>
+    <div class="stock-description">Costco - Premium warehouse club with membership moats</div>
+  </div>
+  <div class="stock-price">$960</div>
+  <div class="recommendation hold">HOLD</div>
+</div>
+</a>
+
+<a href="/analysis/RKLB_business_explanation_20250921/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">RKLB</div>
+    <div class="stock-description">Rocket Lab - #2 US space launch provider</div>
+  </div>
+  <div class="stock-price">$47.79</div>
+  <div class="recommendation hold">WATCH</div>
+</div>
+</a>
+
+<a href="/analysis/LULU_analysis_20250920/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">LULU</div>
+    <div class="stock-description">Lululemon - Athletic apparel turnaround</div>
+  </div>
+  <div class="stock-price">$169.62</div>
+  <div class="recommendation buy">WEAK BUY</div>
+</div>
+</a>
+
+<a href="/analysis/KO_analysis_20250920/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">KO</div>
+    <div class="stock-description">Coca-Cola - Defensive dividend aristocrat</div>
+  </div>
+  <div class="stock-price">$66.21</div>
+  <div class="recommendation buy">QUAL. BUY</div>
+</div>
+</a>
+
+<a href="/analysis/FIG_analysis_20250920/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">FIG</div>
+    <div class="stock-description">Figma - Design software with network effects</div>
+  </div>
+  <div class="stock-price">$80.00</div>
+  <div class="recommendation hold">CAUTIOUS</div>
+</div>
+</a>
+
+<a href="/analysis/UBER_analysis_20250921/" class="stock-link">
+<div class="stock-card">
+  <div class="stock-info">
+    <div class="stock-ticker">UBER</div>
+    <div class="stock-description">Uber - Platform mobility transformation</div>
+  </div>
+  <div class="stock-price">$93.75</div>
+  <div class="recommendation hold">HOLD</div>
+</div>
+</a>
+
 ## 🎮 NAVIGATION MENU
 
 <div class="menu-card">
