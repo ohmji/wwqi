@@ -99,8 +99,8 @@
         // Random glitch effect every 10 seconds
         setInterval(addGlitchEffect, 10000);
         
-        // Add hover sound effects (visual feedback)
-        document.querySelectorAll('.retro-button, .site-nav a').forEach(button => {
+        // Enhanced hover effects for navigation and buttons
+        document.querySelectorAll('.retro-button').forEach(button => {
           button.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05) rotate(1deg)';
           });
@@ -108,6 +108,47 @@
           button.addEventListener('mouseleave', function() {
             this.style.transform = '';
           });
+        });
+
+        // Advanced navigation hover effects with staggered animations
+        document.querySelectorAll('.site-nav a').forEach((link, index) => {
+          link.addEventListener('mouseenter', function() {
+            // Add subtle ripple effect
+            const ripple = document.createElement('span');
+            ripple.className = 'nav-ripple';
+            this.appendChild(ripple);
+            
+            // Remove ripple after animation
+            setTimeout(() => {
+              if (ripple.parentNode) {
+                ripple.parentNode.removeChild(ripple);
+              }
+            }, 600);
+          });
+          
+          // Add staggered glow effect for navigation items
+          link.addEventListener('mouseenter', function() {
+            this.style.setProperty('--hover-delay', `${index * 50}ms`);
+          });
+        });
+
+        // Dropdown menu enhanced interactions
+        document.querySelectorAll('.site-nav .dropdown').forEach(dropdown => {
+          const menu = dropdown.querySelector('.dropdown-menu');
+          if (menu) {
+            let hoverTimer;
+            
+            dropdown.addEventListener('mouseenter', function() {
+              clearTimeout(hoverTimer);
+              menu.style.animation = 'slideIn 0.3s ease-out';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+              hoverTimer = setTimeout(() => {
+                menu.style.animation = 'slideOut 0.3s ease-in';
+              }, 100);
+            });
+          }
         });
 
         // Add click effects
@@ -121,13 +162,68 @@
         });
       });
 
-      // Add CSS animation for pulse effect
+      // Add CSS animations for enhanced hover effects
       const style = document.createElement('style');
       style.textContent = `
         @keyframes pulse {
           0% { transform: scale(1); }
           50% { transform: scale(1.02); }
           100% { transform: scale(1); }
+        }
+        
+        @keyframes slideIn {
+          0% { 
+            opacity: 0; 
+            transform: translateY(-10px) scale(0.95); 
+          }
+          100% { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+          }
+        }
+        
+        @keyframes slideOut {
+          0% { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+          }
+          100% { 
+            opacity: 0; 
+            transform: translateY(-10px) scale(0.95); 
+          }
+        }
+        
+        @keyframes ripple {
+          0% { 
+            transform: scale(0); 
+            opacity: 0.6; 
+          }
+          50% { 
+            opacity: 0.3; 
+          }
+          100% { 
+            transform: scale(2); 
+            opacity: 0; 
+          }
+        }
+        
+        .nav-ripple {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          background: radial-gradient(circle, var(--green-keyword) 0%, transparent 70%);
+          border-radius: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          animation: ripple 0.6s ease-out;
+          pointer-events: none;
+          z-index: 0;
+        }
+        
+        .site-nav a * {
+          position: relative;
+          z-index: 1;
         }
       `;
       document.head.appendChild(style);
