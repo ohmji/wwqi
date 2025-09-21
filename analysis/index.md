@@ -28,6 +28,19 @@ Every analysis follows this systematic approach:
 ### Technology & Software
 
 <div class="analysis-grid">
+  <a href="BABA_analysis_20250921.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">BABA</span>
+      <span class="analysis-recommendation hold">CAUTIOUS</span>
+    </div>
+    <h3>Alibaba - Chinese E-commerce Platform</h3>
+    <p class="analysis-insight">Strong business fundamentals but significant regulatory and competitive risks</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 21, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+
   <a href="FIG_analysis_20250920.html" class="analysis-card">
     <div class="analysis-header">
       <span class="analysis-ticker">FIG</span>
@@ -120,12 +133,12 @@ Every analysis follows this systematic approach:
 ## Analysis Statistics
 
 ### By Recommendation
-- **Buy:** 1 (20%)
-- **Hold:** 4 (80%) 
+- **Buy:** 1 (14%)
+- **Hold:** 6 (86%) 
 - **Sell:** 0 (0%)
 
 ### By Sector
-- **Technology:** 2 analyses
+- **Technology:** 3 analyses
 - **Consumer Discretionary:** 2 analyses  
 - **Consumer Staples:** 1 analysis
 - **Transportation:** 1 analysis

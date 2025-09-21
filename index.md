@@ -15,6 +15,15 @@ title: Home
 <div class="portfolio-grid">
   <div class="stock-card">
     <div class="stock-info">
+      <div class="stock-ticker">BABA</div>
+      <div class="stock-description">Alibaba - Chinese e-commerce platform</div>
+    </div>
+    <div class="stock-price">$95</div>
+    <div class="recommendation hold">CAUTIOUS</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-info">
       <div class="stock-ticker">COST</div>
       <div class="stock-description">Costco - Premium warehouse club</div>
     </div>
