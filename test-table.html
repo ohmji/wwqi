@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Test</title>
+    <link rel="stylesheet" href="/assets/css/retro-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .test-section { margin: 20px 0; border: 1px solid #ccc; padding: 15px; }
+        h3 { color: #333; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Table Rendering Test</h1>
+    
+    <div class="test-section">
+        <h3>HTML Table (Manual)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Revenue ($B)</th>
+                    <th>YoY Growth</th>
+                    <th>Key Drivers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025E</td>
+                    <td>$61.0</td>
+                    <td>+32%</td>
+                    <td>Mounjaro/Zepbound momentum</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>$45.0</td>
+                    <td>+32%</td>
+                    <td>GLP-1 franchise explosion</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>$34.1</td>
+                    <td>+20%</td>
+                    <td>New product launches</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>$28.5</td>
+                    <td>+1%</td>
+                    <td>Portfolio transition</td>
+                </tr>
+                <tr>
+                    <td>2015-2021</td>
+                    <td>~$20-28B</td>
+                    <td>0-8%</td>
+                    <td>Mature product portfolio</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="test-section">
+        <h3>Markdown Table (Parsed by marked.js)</h3>
+        <div id="markdown-output"></div>
+    </div>
+
+    <script>
+        const markdownTable = `
+#### Revenue Acceleration
+
+| Year | Revenue ($B) | YoY Growth | Key Drivers |
+|------|-------------|-----------|-------------|
+| 2025E | $61.0 | +32% | Mounjaro/Zepbound momentum |
+| 2024 | $45.0 | +32% | GLP-1 franchise explosion |
+| 2023 | $34.1 | +20% | New product launches |
+| 2022 | $28.5 | +1% | Portfolio transition |
+| 2015-2021 | ~$20-28B | 0-8% | Mature product portfolio |
+        `;
+        
+        document.getElementById('markdown-output').innerHTML = marked.parse(markdownTable);
+    </script>
+</body>
+</html>

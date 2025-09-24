@@ -38,6 +38,7 @@
 ### 10-Year Financial Performance
 
 #### Revenue Acceleration
+
 | Year | Revenue ($B) | YoY Growth | Key Drivers |
 |------|-------------|-----------|-------------|
 | 2025E | $61.0 | +32% | Mounjaro/Zepbound momentum |
