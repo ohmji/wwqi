@@ -128,13 +128,56 @@ Every analysis follows this systematic approach:
   </a>
 </div>
 
+### Healthcare & Pharmaceuticals
+
+<div class="analysis-grid">
+  <a href="LLY_analysis_20250924.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">LLY</span>
+      <span class="analysis-recommendation hold">HOLD/WAIT</span>
+    </div>
+    <h3>Eli Lilly - Diabetes & Obesity Pharmaceuticals</h3>
+    <p class="analysis-insight">Exceptional GLP-1 franchise with dominant market position but trading at 47-61% premium to fair value</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 24, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+
+  <a href="NVO_analysis_20250924.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">NVO</span>
+      <span class="analysis-recommendation buy">BUY</span>
+    </div>
+    <h3>Novo Nordisk - Diabetes & Obesity Care</h3>
+    <p class="analysis-insight">Dominant GLP-1 franchise trading at 35-52% discount to intrinsic value following competitive concerns</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 24, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+
+  <a href="BDMS_analysis_20250924.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">BDMS</span>
+      <span class="analysis-recommendation buy">WEAK BUY</span>
+    </div>
+    <h3>Bangkok Dusit Medical - Thai Healthcare</h3>
+    <p class="analysis-insight">Leading Southeast Asian healthcare provider with attractive valuation despite regional risks</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Sep 24, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+</div>
+
 ---
 
 ## Analysis Statistics
 
 ### By Recommendation
-- **Buy:** 1 (14%)
-- **Hold:** 6 (86%) 
+- **Buy:** 3 (33%)
+- **Hold:** 6 (67%) 
 - **Sell:** 0 (0%)
 
 ### By Sector
@@ -142,6 +185,7 @@ Every analysis follows this systematic approach:
 - **Consumer Discretionary:** 2 analyses  
 - **Consumer Staples:** 1 analysis
 - **Transportation:** 1 analysis
+- **Healthcare:** 3 analyses
 
 ### Key Insights
 - Most quality businesses currently trade at full/high valuations
