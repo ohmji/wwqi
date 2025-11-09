@@ -171,13 +171,30 @@ Every analysis follows this systematic approach:
   </a>
 </div>
 
+### Industrial & Defense
+
+<div class="analysis-grid">
+  <a href="BWXT_analysis_20251109.html" class="analysis-card">
+    <div class="analysis-header">
+      <span class="analysis-ticker">BWXT</span>
+      <span class="analysis-recommendation buy">QUAL. BUY</span>
+    </div>
+    <h3>BWX Technologies - Nuclear Defense & Isotopes</h3>
+    <p class="analysis-insight">Mission-critical Navy nuclear supplier with regulated moat and isotope optionality</p>
+    <div class="analysis-meta">
+      <span class="analysis-date">Nov 9, 2025</span>
+      <span class="analysis-status">📊 View Analysis</span>
+    </div>
+  </a>
+</div>
+
 ---
 
 ## Analysis Statistics
 
 ### By Recommendation
-- **Buy:** 3 (33%)
-- **Hold:** 6 (67%) 
+- **Buy:** 5 (45%)
+- **Hold:** 6 (55%) 
 - **Sell:** 0 (0%)
 
 ### By Sector
@@ -186,6 +203,7 @@ Every analysis follows this systematic approach:
 - **Consumer Staples:** 1 analysis
 - **Transportation:** 1 analysis
 - **Healthcare:** 3 analyses
+- **Industrial & Defense:** 1 analysis
 
 ### Key Insights
 - Most quality businesses currently trade at full/high valuations
